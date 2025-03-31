@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Nút Back -->
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_back"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Tab lọc -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/filterTabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <Button
+                android:id="@+id/btnFilterAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:backgroundTint="@color/light_blue"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Lọc tất cả các đánh giá"/>
+
+            <Button
+                android:id="@+id/btnFilterMedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_blue"
+                android:text="With pictures/videos"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Lọc đánh giá có hình ảnh hoặc video"/>
+
+            <Button
+                android:id="@+id/btnFilterStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_blue"
+                android:text="Star"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Lọc đánh giá theo số sao"/>
+
+            <Button
+                android:id="@+id/btnFilterVariant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_blue"
+                android:text="Classify"
+                android:contentDescription="Lọc đánh giá theo phân loại"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- TextView để hiển thị thông báo khi không có đánh giá -->
+    <TextView
+        android:id="@+id/txtNoReviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="There are no reviews for this star rating."
+        android:textSize="16sp"
+        android:textColor="#FF0000"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:contentDescription="Thông báo: Không có đánh giá nào"/>
+
+    <!-- Danh sách đánh giá -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewReviews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:contentDescription="List of product reviews. There are currently {count} reviews.."
+        android:accessibilityLiveRegion="polite"/>
+</LinearLayout>

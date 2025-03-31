@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_back" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Edit Product"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:shadowColor="#80000000"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:hint="Enter new name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category:"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/category_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/detail_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:hint="Enter new detail" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/price_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:hint="Enter new price" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image URL:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/imageUrl_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:inputType="textUri"
+        android:textColor="@color/black"
+        android:hint="Enter new image URL" />
+
+    <CheckBox
+        android:id="@+id/available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available"
+        android:textStyle="bold"
+        android:checked="true"/>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomButton"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:text="Delete" />
+</LinearLayout>
