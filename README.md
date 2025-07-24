@@ -2,8 +2,6 @@
 
 An Android-based shopping application for electronics (smartphones, laptops, accessories) with separate modules for users and admins. Built using Java, Firebase, and Android SDK.
 
-## ✨ Features
-
 ### 👤 User Module
 - Product catalog with infinite scrolling and category filters
 - Detailed product pages with image carousel, specifications, and user reviews
